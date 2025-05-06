@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            width: 80%;
+            margin: 0 auto;
+            background-image: url("RESTAURANT IMAGE.gif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+            z-index: 0;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(255, 248, 225, 0.305); /* Light overlay for readability */
+            z-index: -1;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #ff5722;
+            color: white;
+        }
+        .logo {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #e64a19;
+        }
+        .hero {
+            width: 100%;
+            height: 300px;
+            background-color: #ffccbc;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed #d84315;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .main-content {
+            width: 70%;
+            padding: 20px;
+            border: 1px solid #ff8a65;
+            background-color: #ffe0b2;
+            border-radius: 8px;
+            text-align: center; /* Center all content */
+        }
+        /* Featured Item Styles */
+        .main-content h2 {
+            font-size: 1.8em; /* Larger heading */
+            margin-bottom: 15px;
+        }
+        .main-content .image {
+            font-size: 1.4em; /* Larger item name */
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .main-content p {
+            font-size: 1.2em; /* Slightly larger description */
+            margin-bottom: 20px;
+        }
+        .main-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto; /* Center the image */
+            display: block;
+        }
+        .main-content button {
+            margin: 10px; /* Equal margin around buttons */
+            padding: 12px 25px; /* Slightly larger buttons */
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1.1em; /* Larger button text */
+        }
+        .main-content button:hover {
+            background-color: #e64a19;
+        }
+        .sidebar {
+            width: 25%;
+            padding: 20px;
+            border: 1px solid #ff8a65;
+            background-color: #fff3e0;
+            border-radius: 8px;
+        }
+        /* Updated Social Media Section Styles */
+        .sidebar h3 {
+            font-size: 1.3em; /* Slightly larger than default */
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            font-size: 1.1em; /* Slightly larger than default */
+            display: block;
+            margin-bottom: 8px;
+            color: #d84315;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .video-placeholder {
+            font-size: 1.1em; /* Slightly larger than default */
+            margin-bottom: 10px;
+        }
+        .menu-items {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ff7043;
+            border-radius: 8px;
+            background-color: #ffe0b2;
+        }
+        .menu-items div {
+            width: 23%;
+            height: 120px;
+            background-color: #ffccbc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed #d84315;
+            font-weight: bold;
+            flex-direction: column;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #ff5722;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🍔 Sedigo's FastFood</div>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="Menu.html">Menu</a>
+            <a href="Order.html">Order</a>
+            <a href="Deals.html">Deals</a>
+            <a href="Contacts.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>About Sedigo's FastFood INC. Origins</h1>
+        <img src="pics/DR pepper.jpg" width="500" height="200"> 
+    </div>
+    
+    <div class="content">
+        <div class="main-content">
+            <h2>Featured Item</h2>
+            <img src="pics/Premium burger.jpg" alt="Delicious Burger" width="300" height="200">
+            <div class="image">🍔 Premium+ Burger</div>
+            <p>Try our best-selling crispy fries and juicy burgers!</p>
+            <div>
+                <button onclick="window.location.href='Order.html'">Order Now</button>
+                <button onclick="window.location.href='Menu.html'">See Menu</button>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h3>Social Media</h3>
+            <div class="video-placeholder">📹 Promo Video</div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Share & Links</a>
+            <h3>Categories</h3>
+            <ul>
+                <li>Burgers</li>
+                <li>Fries</li>
+                <li>Drinks</li>
+                <li>Desserts</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="menu-items">
+        <div><img src="pics/Super Burger.jpg" alt="Burger" width="120" height="100">🍔 Burger</div>
+        <div><img src="pics/Super fries.jpg" alt="Fries" width="120" height="100">🍟 Fries</div>
+        <div><img src="pics/Super drinks.jpg" alt="Drinks" width="120" height="100">🥤 Drinks</div>
+        <div><img src="pics/Super dessert.jpg" alt="Dessert" width="120" height="100">🍦 Dessert</div>
+    </div>
+    
+    <footer>
+        <p>© 2025 FastFood At Sedigo Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
